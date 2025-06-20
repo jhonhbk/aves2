@@ -4,8 +4,8 @@ function abrirDato(numero) {
 
 function generarQR(id, url) {
   const qr = new QRCodeStyling({
-    width: 100,
-    height: 100,
+    width: 250,
+    height: 250,
     data: url,
     dotsOptions: { color: "#000", type: "square" },
     backgroundOptions: { color: "#fff" },

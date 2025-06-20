@@ -1,80 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Aves del Altiplano</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="imagenes/icono.jpg">
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <header class="hero-section">
-    <!-- Menú de navegación -->
-    <nav class="navbar">
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Inicio</a></li>
-            <li><a href="#coleccion" class="nav-link">Colección de especies</a></li>
-            <li><a href="blog.html" class="nav-link">Blog</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Portada de aves de fondo -->
-    <div class="bird-cover"></div>
-    
-    <!-- Contenido del hero -->
-    <div class="hero-content">
-        <h1 class="main-title">
-            <i class="fas fa-feather-alt"></i>
-            Aves del Altiplano
-        </h1>
-        <p class="subtitle">Descubre la fascinante diversidad del mundo aviar</p>
-    </div>
-    
-    <!-- Decoraciones flotantes -->
-    <div class="hero-decoration">
-        <div class="floating-feather feather-1">🪶</div>
-        <div class="floating-feather feather-2">🪶</div>
-        <div class="floating-feather feather-3">🪶</div>
-    </div>
-</header>
 
-
-<!-- Carrusel Infinito de Aves de Puno -->
-<section class="aves-puno">
-    <section class="collection-header">
-                <h2>Explora las especies de aves del Altiplano</h2>
-            </section>
-    <div class="carousel-container">
-        <div class="carousel-track">
-            <div class="carousel-slide">
-                <img src="imagenes/águila ratonera pechinegra en puno.png" alt="Flamencos Andinos">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/Gallinulamorada.png" alt="Gaviota Andina">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/Garzanocturna.png" alt="Pato Puna">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/GaviotaAndina.png" alt="Zambullidor del Titicaca">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/Cigüeñuela.png" alt="Gallareta Gigante">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/Chorlito de puna.png" alt="Chorlito de la Puna">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/Avocetaandina.png" alt="Ibis de la Puna">
-            </div>
-            <div class="carousel-slide">
-                <img src="imagenes/Garzanocturna.png" alt="Bandurria Andina">
-            </div>
-        </div>
-    </div>
-</section>
     <main class="main-content">
         <div class="container">
             <section class="collection-header" id="coleccion">
@@ -85,60 +18,18 @@
 
             <div class="birds-grid">
                 <div class="bird-card" onclick="abrirDato(1)">
-                    <div class="card-image-container">
-                        <img src="imagenes/águila ratonera pechinegra en puno.png" alt="Gaviota" class="bird-image" />
-                        <div class="card-overlay">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Ver detalles</span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="bird-name">Aguila ratonera pechinegra</h3>
-                        <p class="bird-scientific">Geranoaetus melanoleucus</p>
-                        <div class="card-tags">
-                            <span class="tag">Vuelo aerodinámico</span>
-                            <span class="tag">Aislamiento térmico</span>
-                        </div>
-                    </div>
-                    <!-- <div id="qr1" class="qr-container"></div> -->
+                    
+                    <div id="qr1" class="qr-container"></div>
                 </div>
 
                 <div class="bird-card" onclick="abrirDato(2)">
-                    <div class="card-image-container">
-                        <img src="imagenes/Aguilucho negro.png" alt="Cisne" class="bird-image" />
-                        <div class="card-overlay">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Ver detalles</span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="bird-name">Aguilucho Negro</h3>
-                        <p class="bird-scientific">-</p>
-                        <div class="card-tags">
-                            <span class="tag">Vuelo aerodinámico</span>
-                            <span class="tag">Elegante</span>
-                        </div>
-                    </div>
-                    <!-- <div id="qr2" class="qr-container"></div> -->
+                    
+                    <div id="qr2" class="qr-container"></div>
                 </div>
 
                 <div class="bird-card" onclick="abrirDato(3)">
-                    <div class="card-image-container">
-                        <img src="imagenes/Avocetaandina.png" alt="Águila Real" class="bird-image" />
-                        <div class="card-overlay">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Ver detalles</span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="bird-name">Avoceta Andina</h3>
-                        <p class="bird-scientific">Recurvirostra andina</p>
-                        <div class="card-tags">
-                            <span class="tag">Tamaño: 40–45 cm</span>
-                            <span class="tag">Estado: Vulnerable</span>
-                        </div>
-                    </div>
-                    <!-- <div id="qr3" class="qr-container"></div> -->
+                    
+                    <div id="qr3" class="qr-container"></div>
                 </div>
 
 
@@ -664,17 +555,7 @@
         </div>
     </main>
 
-
-
-    
-
-  <footer class="museum-footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Aves del altiplano - Preservando la belleza natural</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
 </body>
 </html>
