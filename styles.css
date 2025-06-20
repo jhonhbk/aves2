@@ -1,0 +1,580 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Sección Hero */
+.hero-section {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7));
+    padding: 120px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Portada de aves de fondo */
+.bird-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1555169062-013468b47731?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+
+/* Menú de navegación */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 10;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(10px); */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido hero */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    margin-top: 60px;
+}
+
+.main-title {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.main-title i {
+    color: #ceb007;
+    margin-right: 15px;
+    transform: rotate(-15deg);
+    display: inline-block;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Plumas flotantes animadas */
+.floating-feather {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.feather-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.feather-2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.feather-3 {
+    top: 40%;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section {
+        padding: 100px 20px 60px;
+    }
+}
+
+/* Contenido principal */
+.main-content {
+    background: white;
+    min-height: 100vh;
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.collection-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.collection-header h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.collection-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* Grid de aves */
+.birds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 50px;
+}
+
+/* Tarjetas de aves */
+.bird-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+}
+
+.bird-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* Contenedor de imagen - ALTURA AUMENTADA */
+.card-image-container {
+  position: relative;
+  height: 280px; /* Aumentado de 250px a 320px */
+  overflow: hidden;
+}
+
+.bird-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bird-card:hover .bird-image {
+  transform: scale(1.1);
+}
+
+/* Overlay de información */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.bird-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+  padding: 25px;
+}
+
+.bird-name {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.bird-scientific {
+  color: #7f8c8d;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Tags/Etiquetas */
+.card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Contenedor QR */
+.qr-container {
+  margin: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-top: 3px solid #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .birds-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .collection-header h2 {
+    font-size: 2rem;
+  }
+  
+  .card-image-container {
+    height: 400px; /* Altura reducida para móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .birds-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  
+  .card-image-container {
+    height: 250px; /* Altura aún más reducida para pantallas pequeñas */
+  }
+}
+
+
+
+
+/* Footer */
+.museum-footer {
+  background: #271c46;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .birds-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .collection-header h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-section {
+    padding: 60px 20px;
+  }
+  
+  
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .floating-feather {
+    display: none; /* Ocultar en móviles para mejor rendimiento */
+  }
+}
+
+
+
+
+
+
+
+/* Carrusel Infinito Minimalista */
+.aves-puno {
+    background: #fdfdfd;
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(320px * 16); /* 8 slides x 2 para loop infinito */
+    animation: scroll 40s linear infinite;
+    gap: 20px;
+}
+
+.carousel-slide {
+    flex: 0 0 300px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 
+        0 8px 32px rgba(255, 255, 255, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-slide:hover {
+    transform: translateY(-8px) scale(1.02);
+    filter: brightness(1.1);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.05);
+}
+
+/* Animación infinita */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 8));
+    }
+}
+
+/* Pausar en hover */
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Gradiente de desvanecimiento en los bordes */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, #1a1a1a, transparent);
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, #1a1a1a, transparent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aves-puno {
+        padding: 40px 0;
+    }
+    
+    .carousel-track {
+        width: calc(280px * 16);
+        animation: scroll-mobile 35s linear infinite;
+        gap: 15px;
+    }
+    
+    .carousel-slide {
+        flex: 0 0 250px;
+        height: 380px;
+        border-radius: 12px;
+    }
+    
+    @keyframes scroll-mobile {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-265px * 8));
+        }
+    }
+    
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track {
+        width: calc(240px * 16);
+        animation: scroll-small 30s linear infinite;
+        gap: 12px;
+    }
+    
+    .carousel-slide {
+        flex: 0 0 200px;
+        height: 320px;
+        border-radius: 10px;
+    }
+    
+    @keyframes scroll-small {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-212px * 8));
+        }
+    }
+    
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 40px;
+    }
+}
+
+/* Mejoras visuales */
+.carousel-slide {
+    position: relative;
+}
+
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.1) 0%,
+        transparent 50%,
+        rgba(255,255,255,0.05) 100%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-slide:hover::before {
+    opacity: 1;
+}

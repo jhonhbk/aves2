@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aves del Altiplano</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="imagenes/icono.jpg">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="#coleccion" class="nav-link">Colección de especies</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Portada de aves de fondo -->
+    <div class="bird-cover"></div>
+    
+    <!-- Contenido del hero -->
+    <div class="hero-content">
+        <h1 class="main-title">
+            <i class="fas fa-feather-alt"></i>
+            Aves del Altiplano
+        </h1>
+        <p class="subtitle">Descubre la fascinante diversidad del mundo aviar</p>
+    </div>
+    
+    <!-- Decoraciones flotantes -->
+    <div class="hero-decoration">
+        <div class="floating-feather feather-1">🪶</div>
+        <div class="floating-feather feather-2">🪶</div>
+        <div class="floating-feather feather-3">🪶</div>
+    </div>
+</header>
+
+
+<!-- Carrusel Infinito de Aves de Puno -->
+<section class="aves-puno">
+    <section class="collection-header">
+                <h2>Explora las especies de aves del Altiplano</h2>
+            </section>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="imagenes/águila ratonera pechinegra en puno.png" alt="Flamencos Andinos">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Gallinulamorada.png" alt="Gaviota Andina">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Garzanocturna.png" alt="Pato Puna">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/GaviotaAndina.png" alt="Zambullidor del Titicaca">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Cigüeñuela.png" alt="Gallareta Gigante">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Chorlito de puna.png" alt="Chorlito de la Puna">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Avocetaandina.png" alt="Ibis de la Puna">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Garzanocturna.png" alt="Bandurria Andina">
+            </div>
+        </div>
+    </div>
+</section>
+    <main class="main-content">
+        <div class="container">
+            <section class="collection-header" id="coleccion">
+                <h2>Colección de Especies</h2>
+                <p>Explora nuestra selección de aves y descubre datos fascinantes sobre cada especie</p>
+            </section>
+            
+
+            <div class="birds-grid">
+                <div class="bird-card" onclick="abrirDato(1)">
+                    <div class="card-image-container">
+                        <img src="imagenes/águila ratonera pechinegra en puno.png" alt="Gaviota" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Aguila ratonera pechinegra</h3>
+                        <p class="bird-scientific">Larus argentatus</p>
+                        <div class="card-tags">
+                            <span class="tag">Marina</span>
+                            <span class="tag">Costera</span>
+                        </div>
+                    </div>
+                    <div id="qr1" class="qr-container"></div>
+                </div>
+
+                <div class="bird-card" onclick="abrirDato(2)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Aguilucho negro.png" alt="Cisne" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Aguilucho Negro</h3>
+                        <p class="bird-scientific">Cygnus olor</p>
+                        <div class="card-tags">
+                            <span class="tag">Acuática</span>
+                            <span class="tag">Elegante</span>
+                        </div>
+                    </div>
+                    <div id="qr2" class="qr-container"></div>
+                </div>
+
+                <div class="bird-card" onclick="abrirDato(3)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Avocetaandina.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Avoceta Andina</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr3" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(4)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Chorlito de puna.png" alt="Colibrí" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Chorlito de Puna</h3>
+                        <p class="bird-scientific">Trochilidae</p>
+                        <div class="card-tags">
+                            <span class="tag">Pequeña</span>
+                            <span class="tag">Tropical</span>
+                        </div>
+                    </div>
+                    <div id="qr4" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(5)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Chullumpi.png" alt="Flamenco" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Chullumpi</h3>
+                        <p class="bird-scientific">Phoenicopterus</p>
+                        <div class="card-tags">
+                            <span class="tag">Tropical</span>
+                            <span class="tag">Colorida</span>
+                        </div>
+                    </div>
+                    <div id="qr5" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(6)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Cigüeñuela.png" alt="Pelícano" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Cigüeñuela</h3>
+                        <p class="bird-scientific">Pelecanus</p>
+                        <div class="card-tags">
+                            <span class="tag">Marina</span>
+                            <span class="tag">Pescadora</span>
+                        </div>
+                    </div>
+                    <div id="qr6" class="qr-container"></div>
+                </div>
+
+
+
+                <div class="bird-card" onclick="abrirDato(7)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Gallinetacomún.png" alt="Gaviota" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Gallineta Comun</h3>
+                        <p class="bird-scientific">Larus argentatus</p>
+                        <div class="card-tags">
+                            <span class="tag">Marina</span>
+                            <span class="tag">Costera</span>
+                        </div>
+                    </div>
+                    <div id="qr7" class="qr-container"></div>
+                </div>
+
+                <div class="bird-card" onclick="abrirDato(8)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Gallinulamorada.png" alt="Cisne" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Gallinula Morada</h3>
+                        <p class="bird-scientific">Cygnus olor</p>
+                        <div class="card-tags">
+                            <span class="tag">Acuática</span>
+                            <span class="tag">Elegante</span>
+                        </div>
+                    </div>
+                    <div id="qr8" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(9)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Garcetabueyera.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Garceta Bueyera</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr9" class="qr-container"></div>
+                </div>
+
+
+                <!-- EN EL DESPLEGABLE -->
+                <div class="bird-card" onclick="abrirDato(10)">
+                    <div class="card-image-container">
+                        <img src="imagenes/GarcetaGrande.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Garceta Grande</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr10" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(11)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Garzanocturna.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Garza Nocturna</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr11" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(12)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Gavilán dorsirrojo.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Gavilan Dorsir Rojo</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr12" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(13)">
+                    <div class="card-image-container">
+                        <img src="imagenes/GaviotaAndina.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Gaviota Andina</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr13" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(14)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Golondrina andina.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Golondrina Andina</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr14" class="qr-container"></div>
+                </div>
+
+                <div class="bird-card" onclick="abrirDato(15)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Huallata.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Huallata</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr15" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(16)">
+                    <div class="card-image-container">
+                        <img src="imagenes/LekeLeke.jpg" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Leke Leke</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr16" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(17)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Minero de puna.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Minero de Puna</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr17" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(18)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Parihuana.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Parihuana</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr18" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(19)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Parpadeo andino.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Parpadeo Andino</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr19" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(20)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Pata amarilla menor.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Pata Amarilla Menor</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr20" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(21)">
+                    <div class="card-image-container">
+                        <img src="imagenes/PatoPuna.jpg" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Pato Puna</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr21" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(22)">
+                    <div class="card-image-container">
+                        <img src="imagenes/PatoRana.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Pato Rana</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr22" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(23)">
+                    <div class="card-image-container">
+                        <img src="imagenes/PatoSutro.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Pato Sutro</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr23" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(24)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Pinchaflores de garganta negra.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Pincha Flores de Garganta Negra</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr24" class="qr-container"></div>
+                </div>
+
+                <div class="bird-card" onclick="abrirDato(25)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Pinzón sierra peruano.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Pinzon Sierra Peruano</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr25" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(26)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Rascónplomizo.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Rascón Plomizo</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr26" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(27)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Zambullidor.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Zambullidor</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr27" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(28)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Zampullínplateado.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Zampullín Plateado</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr28" class="qr-container"></div>
+                </div>
+
+
+                <div class="bird-card" onclick="abrirDato(29)">
+                    <div class="card-image-container">
+                        <img src="imagenes/Zarapito picolargo.png" alt="Águila Real" class="bird-image" />
+                        <div class="card-overlay">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver detalles</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="bird-name">Zarapito Picolargo</h3>
+                        <p class="bird-scientific">Aquila chrysaetos</p>
+                        <div class="card-tags">
+                            <span class="tag">Rapaz</span>
+                            <span class="tag">Montaña</span>
+                        </div>
+                    </div>
+                    <div id="qr29" class="qr-container"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+    
+
+  <footer class="museum-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Aves del altiplano - Preservando la belleza natural</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
+</body>
+</html>
